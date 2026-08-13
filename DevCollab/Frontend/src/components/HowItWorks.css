@@ -1,0 +1,97 @@
+/* ==================================================
+                HOW IT WORKS
+================================================== */
+
+.how-it-works {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    color: #f0f6fc;
+    margin-bottom: 20px;
+}
+
+.workflow-description {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #8b949e;
+    line-height: 1.8;
+}
+
+/* ================= GRID ================= */
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+/* ================= CARD ================= */
+
+.workflow-card {
+    position: relative;
+
+    background: #161b22;
+
+    border: 1px solid #30363d;
+
+    border-radius: 14px;
+
+    padding: 40px 28px;
+
+    transition: all .25s ease;
+}
+
+.workflow-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #5865F2;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ================= STEP NUMBER ================= */
+
+.step-number {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: rgba(88,101,242,.15);
+
+    color: #5865F2;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= TITLE ================= */
+
+.workflow-card h3 {
+    color: #f0f6fc;
+
+    margin-bottom: 16px;
+
+    font-size: 1.3rem;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.workflow-card p {
+    color: #8b949e;
+
+    line-height: 1.7;
+
+    font-size: .96rem;
+}

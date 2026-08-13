@@ -1,0 +1,17 @@
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    grid-template-areas:
+
+        "continue overview"
+        "tasks deadlines"
+        "projects activity";
+
+    gap:1.5rem;
+
+    align-items:start;
+
+}

@@ -1,0 +1,25 @@
+.teams-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#0d1117;
+
+}
+
+.teams-main{
+
+    flex:1;
+
+    padding:2rem;
+
+    overflow-y:auto;
+
+}
+
+.teams-content{
+
+    width:100%;
+
+}

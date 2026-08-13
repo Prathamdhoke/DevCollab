@@ -1,0 +1,187 @@
+.chat-window {
+  width: 100%;
+  height: 100%;
+  background: #161b22;
+  overflow: hidden;
+}
+
+.chat-window .cs-main-container {
+  height: 100% !important;
+  border: none !important;
+  background: #161b22 !important;
+}
+
+.chat-window .cs-chat-container {
+  background: #161b22 !important;
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.chat-window .cs-conversation-header {
+  background: #161b22 !important;
+  border-bottom: 1px solid #30363d !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.chat-window .cs-conversation-header__content {
+  background: transparent !important;
+}
+
+.chat-window .cs-conversation-header__content > * {
+  background: transparent !important;
+}
+
+.chat-window .cs-conversation-header__user-name {
+  color: #f0f6fc !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+.chat-window .cs-conversation-header__info {
+  color: #8b949e !important;
+  font-size: 0.85rem !important;
+}
+
+/* ===========================
+        MESSAGE LIST
+=========================== */
+
+.chat-window .cs-message-list {
+  background: #0d1117 !important;
+  padding: 1.5rem !important;
+}
+
+.chat-window .cs-message {
+  margin-bottom: 1rem;
+}
+
+.chat-window .cs-message__content {
+  border-radius: 18px !important;
+  padding: 0.9rem 1rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5;
+  box-shadow: none !important;
+}
+
+.chat-window .cs-message--incoming .cs-message__content {
+  background: #21262d !important;
+  color: #f0f6fc !important;
+}
+
+.chat-window .cs-message--outgoing .cs-message__content {
+  background: #5865f2 !important;
+  color: #ffffff !important;
+}
+
+.chat-window .cs-message__sent-time {
+  color: #8b949e !important;
+  font-size: 0.75rem !important;
+}
+
+/* ===========================
+        INPUT AREA
+=========================== */
+
+.chat-window .cs-message-input {
+  background: #161b22 !important;
+  border-top: 1px solid #30363d !important;
+  padding: 1rem !important;
+}
+
+.chat-window .cs-message-input__content-editor-wrapper {
+  background: #21262d !important;
+  border: 1px solid #30363d !important;
+  border-radius: 14px !important;
+  padding: 0.15rem 0.5rem !important;
+}
+
+.chat-window .cs-message-input__content-editor-container {
+  background: transparent !important;
+}
+
+.chat-window .cs-message-input__content-editor {
+  background: transparent !important;
+  color: #f0f6fc !important;
+  min-height: 24px;
+}
+
+.chat-window textarea {
+  background: transparent !important;
+  color: #f0f6fc !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.chat-window textarea::placeholder {
+  color: #8b949e !important;
+}
+
+.chat-window .cs-message-input__content-editor[data-placeholder]:empty::before {
+  color: #8b949e !important;
+}
+
+/* ===========================
+        BUTTONS
+=========================== */
+
+.chat-window .cs-button {
+  color: #8b949e !important;
+  transition: 0.2s;
+}
+
+.chat-window .cs-button:hover {
+  color: #5865f2 !important;
+}
+
+/* ===========================
+        SCROLLBAR
+=========================== */
+
+.chat-window ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window ::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.chat-window ::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 999px;
+}
+
+.chat-window ::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+.chat-window {
+  width: 100%;
+
+  height: 100%;
+
+  /* display: flex; */
+
+  overflow: hidden;
+}
+
+.chat-window .cs-main-container {
+  height: 100% !important;
+
+  display: flex !important;
+}
+
+.chat-window .cs-chat-container {
+  height: 100% !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+}
+
+.chat-window .cs-message-list {
+  flex: 1;
+
+  overflow-y: auto !important;
+}

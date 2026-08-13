@@ -1,0 +1,183 @@
+.request-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:2rem;
+
+    padding:1.6rem;
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:18px;
+
+    transition:
+
+        transform .25s ease,
+
+        border-color .25s ease;
+
+}
+
+.request-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#5865F2;
+
+}
+
+
+
+.request-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+
+
+.request-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:#da3633;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+
+
+.request-info h3{
+
+    color:#f0f6fc;
+
+    margin-bottom:.45rem;
+
+}
+
+
+
+.request-info p{
+
+    color:#8b949e;
+
+    line-height:1.6;
+
+}
+
+
+
+.request-info strong{
+
+    color:#f0f6fc;
+
+}
+
+
+
+.request-actions{
+
+    display:flex;
+
+    gap:1rem;
+
+}
+
+
+
+.request-actions button{
+
+    padding:.8rem 1.4rem;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+.accept-request-btn{
+
+    background:#238636;
+
+    color:white;
+
+}
+
+
+
+.reject-request-btn{
+
+    background:#30363d;
+
+    color:#f0f6fc;
+
+}
+
+
+
+.accept-request-btn:hover{
+
+    background:#2ea043;
+
+}
+
+
+
+.reject-request-btn:hover{
+
+    background:#3b434b;
+
+}
+
+
+
+@media(max-width:850px){
+
+    .request-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .request-actions{
+
+        width:100%;
+
+    }
+
+    .request-actions button{
+
+        flex:1;
+
+    }
+
+}

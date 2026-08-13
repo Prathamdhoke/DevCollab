@@ -1,0 +1,139 @@
+.notifications-page {
+  width: 100%;
+
+  min-height: 100%;
+
+  padding: 2rem;
+}
+
+/* =========================================
+            HEADER
+========================================= */
+
+.notifications-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+
+  margin-bottom: 2rem;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.notifications-header h1 {
+  margin: 0 0 0.5rem;
+
+  color: #f0f6fc;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+.notifications-header p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.95rem;
+}
+
+/* =========================================
+            CONTENT
+========================================= */
+
+.notifications-content {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.notifications-content h2 {
+  margin: 0 0 1rem;
+
+  color: #f0f6fc;
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+}
+
+/* =========================================
+            INVITATION LIST
+========================================= */
+
+.invitations-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+/* =========================================
+            LOADING / EMPTY STATE
+========================================= */
+
+.notifications-state {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 220px;
+
+  padding: 2rem;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.notifications-state h3 {
+  margin: 0 0 0.5rem;
+
+  color: #f0f6fc;
+
+  font-size: 1.05rem;
+}
+
+.notifications-state p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.9rem;
+}
+
+/* =========================================
+            RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 1.25rem;
+  }
+
+  .notifications-header {
+    padding-bottom: 1.2rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .notifications-header h1 {
+    font-size: 1.6rem;
+  }
+}

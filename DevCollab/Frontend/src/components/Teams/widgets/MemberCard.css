@@ -1,0 +1,201 @@
+.member-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:2rem;
+
+    padding:1.5rem;
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:18px;
+
+    transition:
+
+        border-color .25s ease,
+
+        transform .25s ease;
+
+}
+
+.member-card:hover{
+
+    border-color:#5865F2;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.member-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+
+
+.member-avatar{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#5865F2;
+
+    color:white;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+
+
+.member-info h3{
+
+    color:#f0f6fc;
+
+    margin-bottom:.35rem;
+
+}
+
+
+
+.member-info p{
+
+    color:#8b949e;
+
+}
+
+
+
+.member-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+
+
+.member-role{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.6rem 1rem;
+
+    background:#0d1117;
+
+    border-radius:999px;
+
+    color:#c9d1d9;
+
+}
+
+
+
+.member-role svg{
+
+    color:#5865F2;
+
+}
+
+
+
+.member-actions{
+
+    display:flex;
+
+    gap:.8rem;
+
+}
+
+
+
+.member-actions button,
+
+.request-btn{
+
+    padding:.75rem 1.2rem;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#5865F2;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+
+
+.danger-btn{
+
+    background:#da3633 !important;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .member-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .member-right{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .member-actions{
+
+        width:100%;
+
+        flex-wrap:wrap;
+
+    }
+
+}

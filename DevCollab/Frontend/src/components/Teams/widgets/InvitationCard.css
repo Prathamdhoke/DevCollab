@@ -1,0 +1,218 @@
+.invitation-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:2rem;
+
+    padding:1.6rem;
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:18px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+
+.invitation-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#5865F2;
+
+    box-shadow:
+
+        0 18px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+/* ==========================
+        CONTENT
+========================== */
+
+.invitation-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.8rem;
+
+}
+
+
+
+.invitation-content h3{
+
+    color:#f0f6fc;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+
+
+.invitation-content p{
+
+    color:#8b949e;
+
+    line-height:1.6;
+
+}
+
+
+
+.invitation-content strong{
+
+    color:#f0f6fc;
+
+}
+
+
+
+.invitation-members{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    color:#8b949e;
+
+    font-size:.9rem;
+
+}
+
+
+
+/* ==========================
+        BUTTONS
+========================== */
+
+.invitation-actions{
+
+    display:flex;
+
+    gap:1rem;
+
+}
+
+
+
+.accept-btn,
+
+.reject-btn{
+
+    padding:.8rem 1.5rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+
+/* ACCEPT */
+
+.accept-btn{
+
+    background:#238636;
+
+    color:white;
+
+    box-shadow:
+
+        0 8px 18px rgba(35,134,54,.25);
+
+}
+
+
+
+.accept-btn:hover{
+
+    transform:
+        translateY(-3px)
+        translateX(2px);
+
+}
+
+
+
+/* REJECT */
+
+.reject-btn{
+
+    background:#30363d;
+
+    color:#f0f6fc;
+
+}
+
+
+
+.reject-btn:hover{
+
+    background:#3b434b;
+
+    transform:
+        translateY(-3px)
+        translateX(2px);
+
+}
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:850px){
+
+    .invitation-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .invitation-actions{
+
+        width:100%;
+
+    }
+
+    .accept-btn,
+
+    .reject-btn{
+
+        flex:1;
+
+    }
+
+}

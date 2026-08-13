@@ -1,0 +1,180 @@
+/* =====================================================
+                        NAVBAR
+===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 80px;
+
+    background: #0d1117;
+
+    transition:
+        background-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.navbar:hover {
+    background: #111827;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25),
+        0 1px 0 rgba(88,101,242,.25);
+}
+
+/* =====================================================
+                        LOGO
+===================================================== */
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar h1 a {
+    color: #f0f6fc;
+    text-decoration: none;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: color .25s ease;
+}
+
+.navbar h1 a:hover {
+    color: #5865F2;
+}
+
+/* =====================================================
+                        MENU
+===================================================== */
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    list-style: none;
+}
+
+/* =====================================================
+                    NAVIGATION LINKS
+===================================================== */
+
+.nav-link {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #8b949e;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 10px 18px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    transition: all .25s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+
+    color: #5865F2;
+
+    background: #111827;
+
+    border-color: #30363d;
+
+    box-shadow: 2px 2px 0 #000;
+
+    transform: translate(-2px,-2px);
+}
+
+/* =====================================================
+                        LOGIN
+===================================================== */
+
+.login-btn,
+.login-btn:link,
+.login-btn:visited {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #f0f6fc;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 10px 22px;
+
+    border: 1px solid #30363d;
+    border-radius: 8px;
+
+    background: transparent;
+
+    box-shadow: 3px 3px 0 #000;
+
+    transition: all .25s ease;
+}
+
+.login-btn:hover {
+
+    color: #5865F2;
+
+    background: #111827;
+
+    border-color: #5865F2;
+
+    transform: translate(-2px,-2px);
+}
+
+/* =====================================================
+                      SIGN UP
+===================================================== */
+
+.signup-btn,
+.signup-btn:link,
+.signup-btn:visited {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 10px 22px;
+
+    border-radius: 8px;
+
+    background: #5865F2;
+
+    border: 1px solid transparent;
+
+    box-shadow: 4px 4px 0 #000;
+
+    transition: all .25s ease;
+}
+
+.signup-btn:hover {
+
+    color: #ffffff;
+
+    background: #4752C4;
+
+    transform: translate(-2px,-2px);
+}

@@ -1,0 +1,296 @@
+.sidebar{
+
+    width:280px;
+
+    min-height:100vh;
+
+    background:#161b22;
+
+    border-right:1px solid #30363d;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:1.5rem;
+
+    position:sticky;
+
+    top:0;
+
+}
+
+
+
+/* ==========================
+            BRAND
+========================== */
+
+.sidebar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    margin-bottom:2.5rem;
+
+}
+
+
+
+.brand-logo{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #5865F2,
+        #7d89ff
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:1.1rem;
+
+    box-shadow:
+        0 10px 25px rgba(88,101,242,.35);
+
+}
+
+
+
+.brand-info h2{
+
+    color:#f0f6fc;
+
+    font-size:1.2rem;
+
+    margin-bottom:.2rem;
+
+}
+
+
+
+.brand-info p{
+
+    color:#8b949e;
+
+    font-size:.8rem;
+
+}
+
+
+
+/* ==========================
+        NAVIGATION
+========================== */
+
+.sidebar-navigation{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+    flex:1;
+
+}
+
+
+
+/* ==========================
+        SIDEBAR ITEM
+========================== */
+
+.sidebar-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    padding:.9rem 1rem;
+
+    border-radius:14px;
+
+    color:#8b949e;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.sidebar-item svg{
+
+    transition:.25s;
+
+}
+
+
+
+.sidebar-item span{
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+}
+
+
+
+/* Hover */
+
+.sidebar-item:hover{
+
+    background:#0d1117;
+
+    color:#f0f6fc;
+
+    transform:translateX(6px);
+
+}
+
+
+
+.sidebar-item:hover svg{
+
+    color:#8b9cff;
+
+}
+
+
+
+/* ==========================
+        ACTIVE ITEM
+========================== */
+
+.sidebar-item.active{
+
+    background:#0d1117;
+
+    color:#f0f6fc;
+
+}
+
+
+
+.sidebar-item.active::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:10%;
+
+    width:4px;
+
+    height:80%;
+
+    background:#5865F2;
+
+    border-radius:999px;
+
+}
+
+
+
+.sidebar-item.active svg{
+
+    color:#5865F2;
+
+}
+
+
+
+/* ==========================
+        WORKSPACE
+========================== */
+
+.workspace-card{
+
+    background:#0d1117;
+
+    border:1px solid #30363d;
+
+    border-radius:18px;
+
+    padding:1.2rem;
+
+    transition:.3s;
+
+}
+
+
+
+.workspace-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#5865F2;
+
+    box-shadow:
+
+        0 18px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+.workspace-label{
+
+    display:inline-block;
+
+    color:#8b949e;
+
+    font-size:.75rem;
+
+    margin-bottom:.75rem;
+
+}
+
+
+
+.workspace-card h3{
+
+    color:#f0f6fc;
+
+    margin-bottom:.4rem;
+
+}
+
+
+
+.workspace-card p{
+
+    color:#8b949e;
+
+    font-size:.85rem;
+
+}

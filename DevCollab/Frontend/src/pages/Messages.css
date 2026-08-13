@@ -1,0 +1,113 @@
+.messages-page {
+  height: calc(100vh - 48px);
+
+  overflow: hidden;
+
+  animation: fadeIn 0.35s ease;
+}
+
+.messages-container {
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: 320px minmax(0, 1fr) 320px;
+
+  gap: 1.5rem;
+
+  overflow: hidden;
+}
+
+.conversation-panel,
+.chat-panel,
+.profile-panel {
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.conversation-panel {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.chat-panel {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.profile-panel {
+  display: flex;
+
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1500px) {
+  .messages-container {
+    grid-template-columns: 280px minmax(0, 1fr) 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .messages-container {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .profile-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .messages-container {
+    grid-template-columns: 1fr;
+  }
+
+  .conversation-panel {
+    height: 300px;
+  }
+}

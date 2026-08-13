@@ -1,0 +1,193 @@
+.conversation-list {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  background: #161b22;
+}
+
+.conversation-header {
+  padding: 1.3rem 1.5rem;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.conversation-header h2 {
+  color: #f0f6fc;
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+}
+
+.conversation-items {
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+.conversation-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 1.25rem;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+
+  border-left: 4px solid transparent;
+
+  border-bottom: 1px solid #21262d;
+}
+
+.conversation-card:hover {
+  background: #1b2129;
+}
+
+.conversation-card.active {
+  background: #21262d;
+
+  border-left: 4px solid #5865f2;
+}
+
+.conversation-avatar {
+  width: 54px;
+
+  height: 54px;
+
+  border-radius: 50%;
+
+  background: #5865f2;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.35);
+}
+
+.conversation-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.conversation-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 0.35rem;
+
+  gap: 1rem;
+}
+
+.conversation-top h3 {
+  max-width: 170px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.conversation-top span {
+  color: #8b949e;
+
+  font-size: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.conversation-info p {
+  color: #c9d1d9;
+
+  font-size: 0.88rem;
+
+  margin-bottom: 0.65rem;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.conversation-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.conversation-footer span {
+  font-size: 0.78rem;
+
+  color: #8b949e;
+}
+
+.online {
+  color: #2ea043 !important;
+
+  font-weight: 600;
+}
+
+.offline {
+  color: #8b949e !important;
+}
+
+.conversation-items::-webkit-scrollbar {
+  width: 7px;
+}
+
+.conversation-items::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.conversation-items::-webkit-scrollbar-thumb {
+  background: #30363d;
+
+  border-radius: 999px;
+}
+
+.conversation-items::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+.last-message {
+  color: #8b949e;
+
+  font-size: 0.85rem;
+
+  margin-top: 0.35rem;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  max-width: 220px;
+}

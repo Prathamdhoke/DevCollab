@@ -1,0 +1,49 @@
+.team-workspace{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3rem;
+
+}
+
+
+
+.workspace-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+}
+
+
+
+.workspace-section h2{
+
+    color:#f0f6fc;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+    padding-bottom:.8rem;
+
+    border-bottom:1px solid #30363d;
+
+}
+
+
+
+.workspace-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.3rem;
+
+}

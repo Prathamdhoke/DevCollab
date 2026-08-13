@@ -1,0 +1,217 @@
+.active-projects{
+
+    grid-area:projects;
+
+    padding:1.8rem;
+
+}
+
+.active-projects h2{
+
+    color:#f0f6fc;
+
+    margin-bottom:1.5rem;
+
+}
+
+.projects-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.3rem;
+
+    max-height:420px;
+
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+
+}
+
+.projects-list:hover{
+
+    overflow-y:auto;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#5865F2 transparent;
+
+}
+
+.projects-list::-webkit-scrollbar{
+
+    width:0;
+
+}
+
+.projects-list:hover::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.projects-list::-webkit-scrollbar-thumb{
+
+    background:#5865F2;
+
+    border-radius:999px;
+
+}
+
+.project-item{
+
+    background:#0d1117;
+
+    border:1px solid #30363d;
+
+    border-radius:16px;
+
+    padding:1.3rem;
+
+    transition:.3s;
+
+}
+
+.project-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#5865F2;
+
+    box-shadow:0 10px 30px rgba(88,101,242,.15);
+
+}
+
+.project-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:1.3rem;
+
+}
+
+.project-top h3{
+
+    color:#f0f6fc;
+
+    margin-bottom:.3rem;
+
+}
+
+.project-top p{
+
+    color:#8b949e;
+
+    font-size:.85rem;
+
+}
+
+.project-status{
+
+    padding:.35rem .8rem;
+
+    border-radius:999px;
+
+    text-transform:capitalize;
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+.project-status.active{
+
+    background:#173c30;
+
+    color:#4fd1a5;
+
+}
+
+.project-status.completed{
+
+    background:#1b2d5a;
+
+    color:#7aa2ff;
+
+}
+
+.project-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    margin-bottom:1.2rem;
+
+}
+
+.progress-track{
+
+    flex:1;
+
+    height:8px;
+
+    background:#21262d;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-value{
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #5865F2,
+        #8b9cff
+    );
+
+    border-radius:999px;
+
+}
+
+.project-progress span{
+
+    color:#c9d1d9;
+
+    font-size:.85rem;
+
+    min-width:45px;
+
+}
+
+.open-project{
+
+    background:#5865F2;
+
+    color:white;
+
+    border:none;
+
+    padding:.7rem 1.2rem;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.open-project:hover{
+
+    background:#6c79ff;
+
+}

@@ -1,0 +1,200 @@
+.profile-banner {
+  width: 100%;
+}
+
+.banner-image {
+  position: relative;
+
+  height: 320px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top left, #5865f2 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #3b82f6 0%, transparent 35%),
+    linear-gradient(135deg, #111827, #161b22, #0d1117);
+
+  border: 1px solid #30363d;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.banner-image::before {
+  content: "</>";
+
+  position: absolute;
+
+  top: 30px;
+
+  left: 40px;
+
+  font-size: 7rem;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.03);
+}
+
+.banner-image::after {
+  content: "const developer = true;";
+
+  position: absolute;
+
+  right: 50px;
+
+  bottom: 40px;
+
+  color: rgba(255, 255, 255, 0.05);
+
+  font-family: monospace;
+
+  font-size: 1.3rem;
+}
+
+.banner-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  backdrop-filter: blur(1px);
+}
+
+.profile-avatar {
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #5865f2;
+
+  border: 6px solid #161b22;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 2.8rem;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 30px rgba(88, 101, 242, 0.45);
+
+  margin-bottom: 1.3rem;
+}
+
+.banner-overlay h1 {
+  color: white;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+.banner-overlay h3 {
+  color: #8b949e;
+
+  font-size: 1.05rem;
+
+  font-weight: 500;
+
+  margin-bottom: 1rem;
+}
+
+.profile-location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  color: #c9d1d9;
+
+  margin-bottom: 1.8rem;
+}
+
+.profile-actions {
+  display: flex;
+
+  gap: 1rem;
+
+  align-items: center;
+}
+
+.edit-profile-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.6rem;
+
+  background: #5865f2;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.edit-profile-btn:hover {
+  transform: translateY(-2px);
+
+  background: #4752c4;
+
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.35);
+}
+
+.logout-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.6rem;
+
+  background: #21262d;
+
+  color: #f85149;
+
+  border: 1px solid #30363d;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+
+  background: #30363d;
+}

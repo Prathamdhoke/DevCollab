@@ -1,0 +1,101 @@
+/* ==================================================
+                    FEATURES SECTION
+================================================== */
+
+.features {
+    max-width: 1400px;          /* Increased from 1200px */
+    margin: 120px auto;
+    padding: 0 30px;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f0f6fc;
+    margin-bottom: 70px;
+}
+
+/* ================= GRID ================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);   /* 5 cards in one row */
+    gap: 20px;
+}
+
+/* ================= CARD ================= */
+
+.feature-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+
+    padding: 28px 22px;      /* Slightly reduced */
+
+    transition: all 0.25s ease;
+
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #5865F2;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ================= ICON ================= */
+
+.feature-card span {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.8rem;
+
+    background: rgba(88,101,242,.12);
+
+    border-radius: 12px;
+
+    margin-bottom: 22px;
+}
+
+/* ================= TITLE ================= */
+
+.feature-card h3 {
+    color: #f0f6fc;
+
+    font-size: 1.2rem;      /* Slightly reduced */
+
+    margin-bottom: 16px;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.feature-card p {
+    color: #8b949e;
+
+    line-height: 1.7;
+
+    font-size: 0.92rem;     /* Slightly reduced */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

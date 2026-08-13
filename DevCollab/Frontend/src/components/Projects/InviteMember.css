@@ -1,0 +1,203 @@
+.invite-member-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 1.5rem;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(4px);
+}
+
+.invite-member-modal {
+  width: 100%;
+
+  max-width: 480px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 20px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.invite-member-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 1.5rem;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.invite-member-header h2 {
+  margin: 0 0 0.4rem;
+
+  color: #f0f6fc;
+
+  font-size: 1.35rem;
+}
+
+.invite-member-header p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.85rem;
+}
+
+.invite-member-close {
+  width: 34px;
+
+  height: 34px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #21262d;
+
+  color: #c9d1d9;
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+}
+
+.invite-member-close:hover {
+  background: #30363d;
+
+  color: white;
+}
+
+/* ==========================
+        FORM
+========================== */
+
+.invite-member-form {
+  padding: 1.5rem;
+}
+
+.invite-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.invite-form-group label {
+  color: #c9d1d9;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.invite-form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0.8rem 0.9rem;
+
+  background: #0d1117;
+
+  border: 1px solid #30363d;
+
+  border-radius: 10px;
+
+  color: #f0f6fc;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+}
+
+.invite-form-group input::placeholder {
+  color: #6e7681;
+}
+
+.invite-form-group input:focus {
+  border-color: #5865f2;
+
+  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.12);
+}
+
+/* ==========================
+        ACTIONS
+========================== */
+
+.invite-member-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 0.8rem;
+
+  margin-top: 1.5rem;
+}
+
+.cancel-invite-btn,
+.send-invite-btn {
+  padding: 0.75rem 1.2rem;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cancel-invite-btn {
+  background: #21262d;
+
+  border: 1px solid #30363d;
+
+  color: #c9d1d9;
+}
+
+.cancel-invite-btn:hover {
+  background: #30363d;
+}
+
+.send-invite-btn {
+  background: #5865f2;
+
+  border: none;
+
+  color: white;
+}
+
+.send-invite-btn:hover {
+  background: #4752c4;
+}
+
+.send-invite-btn:disabled,
+.cancel-invite-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}

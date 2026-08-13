@@ -1,0 +1,198 @@
+.invitation-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  padding: 1.2rem 1.4rem;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 14px;
+
+  transition: 0.25s;
+}
+
+.invitation-card:hover {
+  border-color: #5865f2;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.12);
+}
+
+/* =========================================
+            INVITATION ICON
+========================================= */
+
+.invitation-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(88, 101, 242, 0.12);
+
+  color: #5865f2;
+
+  border-radius: 12px;
+}
+
+/* =========================================
+            INVITATION INFO
+========================================= */
+
+.invitation-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.invitation-info h3 {
+  margin: 0 0 0.35rem;
+
+  color: #f0f6fc;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+}
+
+.invitation-info p {
+  margin: 0 0 0.35rem;
+
+  color: #c9d1d9;
+
+  font-size: 0.9rem;
+}
+
+.invitation-description {
+  display: block;
+
+  color: #8b949e;
+
+  font-size: 0.82rem;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+            ACTION BUTTONS
+========================================= */
+
+.invitation-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  flex-shrink: 0;
+}
+
+.invitation-actions button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.4rem;
+
+  padding: 0.65rem 1rem;
+
+  border-radius: 9px;
+
+  border: none;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* =========================================
+                ACCEPT
+========================================= */
+
+.accept-invitation-btn {
+  background: #5865f2;
+
+  color: white;
+}
+
+.accept-invitation-btn:hover {
+  background: #4752c4;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+                REJECT
+========================================= */
+
+.reject-invitation-btn {
+  background: #21262d;
+
+  color: #c9d1d9;
+
+  border: 1px solid #30363d !important;
+}
+
+.reject-invitation-btn:hover {
+  background: #30363d;
+
+  color: #f0f6fc;
+}
+
+/* =========================================
+                DISABLED
+========================================= */
+
+.invitation-actions button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================
+                RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .invitation-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .invitation-info {
+    width: calc(100% - 64px);
+  }
+
+  .invitation-actions {
+    width: 100%;
+
+    margin-top: 0.5rem;
+  }
+
+  .invitation-actions button {
+    flex: 1;
+  }
+}

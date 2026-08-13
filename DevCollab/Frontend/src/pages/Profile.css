@@ -1,0 +1,49 @@
+.profile-page {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+
+  animation: fadeIn 0.35s ease;
+}
+
+.profile-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+}
+
+.profile-card {
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 18px;
+
+  padding: 2rem;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

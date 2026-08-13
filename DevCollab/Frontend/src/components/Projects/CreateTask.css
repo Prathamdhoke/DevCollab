@@ -1,0 +1,219 @@
+.create-task-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 1.5rem;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(4px);
+}
+
+.create-task-modal {
+  width: 100%;
+
+  max-width: 560px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 20px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.create-task-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 1.5rem;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.create-task-header h2 {
+  margin: 0 0 0.4rem;
+
+  color: #f0f6fc;
+
+  font-size: 1.35rem;
+}
+
+.create-task-header p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.85rem;
+}
+
+.create-task-close {
+  width: 34px;
+
+  height: 34px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #21262d;
+
+  color: #c9d1d9;
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+}
+
+.create-task-close:hover {
+  background: #30363d;
+
+  color: white;
+}
+
+/* ==========================
+        FORM
+========================== */
+
+.create-task-form {
+  padding: 1.5rem;
+}
+
+.task-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.task-form-group label {
+  color: #c9d1d9;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.task-form-group input,
+.task-form-group textarea,
+.task-form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0.8rem 0.9rem;
+
+  background: #0d1117;
+
+  border: 1px solid #30363d;
+
+  border-radius: 10px;
+
+  color: #f0f6fc;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+}
+
+.task-form-group textarea {
+  resize: vertical;
+
+  min-height: 100px;
+}
+
+.task-form-group input:focus,
+.task-form-group textarea:focus,
+.task-form-group select:focus {
+  border-color: #5865f2;
+
+  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.12);
+}
+
+.task-form-group input::placeholder,
+.task-form-group textarea::placeholder {
+  color: #6e7681;
+}
+
+/* ==========================
+        ACTIONS
+========================== */
+
+.create-task-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 0.8rem;
+
+  margin-top: 1.5rem;
+}
+
+.cancel-task-btn,
+.submit-task-btn {
+  padding: 0.75rem 1.2rem;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cancel-task-btn {
+  background: #21262d;
+
+  border: 1px solid #30363d;
+
+  color: #c9d1d9;
+}
+
+.cancel-task-btn:hover {
+  background: #30363d;
+}
+
+.submit-task-btn {
+  background: #5865f2;
+
+  border: none;
+
+  color: white;
+}
+
+.submit-task-btn:hover {
+  background: #4752c4;
+}
+
+.submit-task-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}

@@ -1,0 +1,71 @@
+/* ==========================================
+            GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+            GLOBAL STYLES
+========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    background: #0d1117;
+
+    padding: 12px;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    color: #f0f6fc;
+}
+
+/* ==========================================
+            APPLICATION FRAME
+========================================== */
+
+#root.app-active {
+
+    border-color: #5865F2;
+
+    box-shadow:
+        0 0 0 1px rgba(88,101,242,.18),
+        0 15px 40px rgba(0,0,0,.35);
+
+}
+
+#root.app-active {
+
+    border-color: #5865F2;
+
+    box-shadow:
+        0 0 0 1px rgba(88,101,242,.18),
+        0 15px 40px rgba(0,0,0,.35);
+
+}
+
+#root {
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+#root:hover,
+#root:focus-within {
+    border-color: #5865F2;
+
+    box-shadow:
+        0 0 0 1px rgba(88,101,242,.15),
+        0 12px 35px rgba(0,0,0,.35);
+}

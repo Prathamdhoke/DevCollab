@@ -1,0 +1,87 @@
+.dashboard {
+  padding: 2rem;
+
+  min-height: 100%;
+}
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  grid-template-areas:
+    "continue overview"
+    "tasks deadlines"
+    "projects activity";
+
+  gap: 1.5rem;
+
+  align-items: start;
+}
+
+/* ===============================
+        Common Widget Style
+================================ */
+
+.dashboard-widget {
+  position: relative;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  overflow: hidden;
+}
+
+.dashboard-widget:hover {
+  transform: translateY(-8px);
+
+  border-color: #5865f2;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ===============================
+        Reusable Scroll Area
+================================ */
+
+.widget-scroll {
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+}
+
+.widget-scroll:hover {
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: #5865f2 transparent;
+}
+
+.widget-scroll::-webkit-scrollbar {
+  width: 0;
+
+  transition: 0.3s;
+}
+
+.widget-scroll:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.widget-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.widget-scroll::-webkit-scrollbar-thumb {
+  background: #5865f2;
+
+  border-radius: 999px;
+}
