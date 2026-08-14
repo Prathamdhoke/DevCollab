@@ -28,7 +28,7 @@ const startServer = async () => {
 
     const io = new Server(server, {
       cors: {
-        origin: ["http://localhost:5173", "https://your-vercel-url.vercel.app"],
+        origin: ["http://localhost:5173", "https://devcollab-phi.vercel.app"],
         credentials: true,
       },
     });
