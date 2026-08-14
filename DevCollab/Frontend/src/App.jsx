@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 
 import Login from "./pages/Login";
 
-import Signup from "./pages/Signup";
+import Signup from "./pages/SignUp";
 
 import NotFound from "./pages/NotFound";
 
