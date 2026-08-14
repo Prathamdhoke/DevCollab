@@ -26,26 +26,10 @@ const app = express();
                 CORS CONFIGURATION
 =========================================== */
 
-// app.use(
-//   cors({
-//     origin: (origin, callback) => {
-//       const allowedOrigins = [
-//         "https://devcollab-phi.vercel.app",
-//       ];
-
-//       if (!origin || allowedOrigins.includes(origin)) {
-//         callback(null, true);
-//       } else {
-//         callback(new Error("Not allowed by CORS"));
-//       }
-//     },
-//     credentials: true,
-//   }),
-// );
-
 app.use(
   cors({
-    origin: "https://devcollab-phi.vercel.app",
+    origin: ["http://localhost:5173", "https://devcollab-phi.vercel.app"],
+
     credentials: true,
   }),
 );
@@ -72,68 +56,32 @@ app.use(cookieParser());
                 HEALTH CHECK
 =========================================== */
 
-app.get(
-  "/",
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
 
-  (req, res) => {
-    res.status(200).json({
-      success: true,
-
-      message: "DevCollab Backend Running 🚀",
-    });
-  },
-);
+    message: "DevCollab Backend Running 🚀",
+  });
+});
 
 /* ===========================================
                 API ROUTES
 =========================================== */
 
-app.use(
-  "/api/auth",
+app.use("/api/auth", authRoutes);
 
-  authRoutes,
-);
+app.use("/api/profile", profileRoutes);
 
-app.use(
-  "/api/profile",
+app.use("/api/projects", projectRoutes);
 
-  profileRoutes,
-);
+app.use("/api/projects/:projectId/members", projectMemberRoutes);
 
-app.use(
-  "/api/projects",
+app.use("/api", projectInvitationRoutes);
 
-  projectRoutes,
-);
+app.use("/api", taskRoutes);
 
-app.use(
-  "/api/projects/:projectId/members",
+app.use("/api", conversationRoutes);
 
-  projectMemberRoutes,
-);
-
-app.use(
-  "/api",
-
-  projectInvitationRoutes,
-);
-
-app.use(
-  "/api",
-
-  taskRoutes,
-);
-
-app.use(
-  "/api",
-
-  conversationRoutes,
-);
-
-app.use(
-  "/api",
-
-  messageRoutes,
-);
+app.use("/api", messageRoutes);
 
 export default app;

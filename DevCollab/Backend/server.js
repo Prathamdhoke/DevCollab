@@ -29,6 +29,9 @@ const startServer = async () => {
     const io = new Server(server, {
       cors: {
         origin: ["http://localhost:5173", "https://devcollab-phi.vercel.app"],
+
+        methods: ["GET", "POST"],
+
         credentials: true,
       },
     });
@@ -80,10 +83,6 @@ const startServer = async () => {
     io.on("connection", async (socket) => {
       console.log(`Socket connected: ${socket.user.name} (${socket.id})`);
 
-      /* =====================================================
-                    USER ONLINE
-  ===================================================== */
-
       const userId = socket.user._id.toString();
 
       const currentConnections = onlineUsers.get(userId) || 0;
@@ -97,13 +96,14 @@ const startServer = async () => {
 
         io.emit("user-status", {
           userId,
+
           isOnline: true,
         });
       }
 
       /* =====================================================
                     JOIN CONVERSATION
-  ===================================================== */
+      ===================================================== */
 
       socket.on("join-conversation", async (conversationId) => {
         try {
@@ -133,7 +133,7 @@ const startServer = async () => {
 
       /* =====================================================
                     SEND MESSAGE
-  ===================================================== */
+      ===================================================== */
 
       socket.on("send-message", async ({ conversationId, text }) => {
         try {
@@ -145,10 +145,6 @@ const startServer = async () => {
             return;
           }
 
-          /* ==========================
-              FIND CONVERSATION
-      ========================== */
-
           const conversation = await Conversation.findById(conversationId);
 
           if (!conversation) {
@@ -156,10 +152,6 @@ const startServer = async () => {
 
             return;
           }
-
-          /* ==========================
-              PARTICIPANT CHECK
-      ========================== */
 
           const isParticipant = conversation.participants.some(
             (participantId) =>
@@ -172,10 +164,6 @@ const startServer = async () => {
             return;
           }
 
-          /* ==========================
-              FIND RECEIVER
-      ========================== */
-
           const receiverId = conversation.participants.find(
             (participantId) =>
               participantId.toString() !== socket.user._id.toString(),
@@ -186,10 +174,6 @@ const startServer = async () => {
 
             return;
           }
-
-          /* ==========================
-              CREATE MESSAGE
-      ========================== */
 
           const newMessage = new Message({
             conversation: conversation._id,
@@ -203,11 +187,7 @@ const startServer = async () => {
 
           await newMessage.save();
 
-          console.log("Message saved to MongoDB:", newMessage._id.toString());
-
-          /* ==========================
-          UPDATE CONVERSATION
-      ========================== */
+          console.log("Message saved:", newMessage._id.toString());
 
           conversation.updatedAt = new Date();
 
@@ -215,17 +195,9 @@ const startServer = async () => {
 
           await conversation.save();
 
-          /* ==========================
-              POPULATE MESSAGE
-      ========================== */
-
           await newMessage.populate("sender", "name username avatar");
 
           await newMessage.populate("receiver", "name username avatar");
-
-          /* ==========================
-          SEND TO BOTH USERS
-      ========================== */
 
           io.to(conversationId).emit("new-message", newMessage);
         } catch (error) {
@@ -235,7 +207,7 @@ const startServer = async () => {
 
       /* =====================================================
                     DISCONNECT
-  ===================================================== */
+      ===================================================== */
 
       socket.on("disconnect", async () => {
         console.log(`Socket disconnected: ${socket.user.name} (${socket.id})`);
