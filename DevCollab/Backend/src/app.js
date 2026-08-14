@@ -28,7 +28,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://devcollab-phi.vercel.app"],
+    origin: ["http://localhost:5173", "https://devcollab-phi.vercel.app" , "https://devcollab-5xtqii2y-pratham-s-projects22.vercel.app"],
 
     credentials: true,
   }),
