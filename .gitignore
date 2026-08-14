@@ -2,16 +2,16 @@
 # Dependencies
 # =========================
 
-Frontend/node_modules/
-Backend/node_modules/
+DevCollab/Frontend/node_modules/
+DevCollab/Backend/node_modules/
 
 
 # =========================
 # Build Output
 # =========================
 
-Frontend/dist/
-Backend/dist/
+DevCollab/Frontend/dist/
+DevCollab/Backend/dist/
 dist-ssr/
 
 
@@ -19,8 +19,8 @@ dist-ssr/
 # Environment Variables
 # =========================
 
-Frontend/.env
-Backend/.env
+DevCollab/Frontend/.env
+DevCollab/Backend/.env
 
 
 # =========================
